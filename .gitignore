@@ -1,0 +1,81 @@
+# === Node Modules ===
+**/node_modules/
+**/.pnp/
+.pnp.js
+
+# === Logs ===
+logs/
+**/*.log
+**/*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Environment Variables ===
+**/.env
+**/.env.*.local
+**/.env.local
+**/.env.test
+**/.env.production
+
+# === Build Output ===
+**/dist/
+**/build/
+**/.next/
+**/.output/
+**/.turbo/
+.next/
+.out/
+.output/
+.turbo/
+out/
+
+# === Coverage ===
+**/coverage/
+
+# === Cache / Temp Files ===
+.cache/
+**/.cache/
+**/*.tsbuildinfo
+**/*.tgz
+**/*.pid
+**/*.seed
+**/*.tmp
+**/*.bak
+**/*.swp
+**/*.swo
+
+# === Lock Files ===
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# === IDEs ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# === Husky ===
+.husky/_/
+
+# === Lint / Formatter Caches ===
+.eslintcache
+.prettiercache
+
+# === Docs / Misc ===
+docs/
+*.md~
+*.orig
+
+# === Public Uploads / Local Data (optional) ===
+/data
+/public/uploads
+/uploads
+/tmp

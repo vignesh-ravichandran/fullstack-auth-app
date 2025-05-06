@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/authdb
+      - JWT_SECRET=your_jwt_secret
+      - JWT_REFRESH_SECRET=your_refresh_secret
+      - NODE_ENV=development
+    depends_on:
+      - mongo
+    networks:
+      - auth-network
+
+  frontend:
+    build:
+      context: ./frontend    
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - auth-network
+
+  mongo:
+    image: mongo:5.0
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    networks:
+      - auth-network
+
+networks:
+  auth-network:
+    driver: bridge
